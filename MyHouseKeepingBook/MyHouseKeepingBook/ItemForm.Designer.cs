@@ -186,7 +186,7 @@
         public System.Windows.Forms.ComboBox cmbCategory;
         public System.Windows.Forms.TextBox txtItem;
         public System.Windows.Forms.TextBox textRemarks;
-        private CategoryDataSet categoryDataSet;
         private System.Windows.Forms.BindingSource categoryDataTableBindingSource;
+        public CategoryDataSet categoryDataSet;
     }
 }

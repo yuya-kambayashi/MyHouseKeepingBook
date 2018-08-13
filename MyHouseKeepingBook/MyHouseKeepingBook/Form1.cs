@@ -16,5 +16,13 @@ namespace MyHouseKeepingBook
         {
             InitializeComponent();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            ItemForm itemForm = new ItemForm();
+            //DailogResult drRet = 
+            itemForm.ShowDialog();
+
+        }
     }
 }
