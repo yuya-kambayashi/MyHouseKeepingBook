@@ -126,9 +126,11 @@
             // mtxtMoney
             // 
             this.mtxtMoney.Location = new System.Drawing.Point(265, 101);
+            this.mtxtMoney.Mask = "999999";
             this.mtxtMoney.Name = "mtxtMoney";
             this.mtxtMoney.Size = new System.Drawing.Size(100, 19);
             this.mtxtMoney.TabIndex = 11;
+            this.mtxtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ItemForm
             // 
@@ -154,17 +156,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MonthCalendar monCalender;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.ComboBox cmbCategory;
-        private System.Windows.Forms.TextBox txtItem;
-        private System.Windows.Forms.TextBox textRemarks;
-        private System.Windows.Forms.MaskedTextBox mtxtMoney;
+        public System.Windows.Forms.MaskedTextBox mtxtMoney;
+        public System.Windows.Forms.MonthCalendar monCalender;
+        public System.Windows.Forms.ComboBox cmbCategory;
+        public System.Windows.Forms.TextBox txtItem;
+        public System.Windows.Forms.TextBox textRemarks;
     }
 }
