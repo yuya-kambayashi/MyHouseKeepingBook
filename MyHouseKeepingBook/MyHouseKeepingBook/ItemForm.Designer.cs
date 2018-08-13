@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.monCalender = new System.Windows.Forms.MonthCalendar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,10 @@
             this.txtItem = new System.Windows.Forms.TextBox();
             this.textRemarks = new System.Windows.Forms.TextBox();
             this.mtxtMoney = new System.Windows.Forms.MaskedTextBox();
+            this.categoryDataSet = new MyHouseKeepingBook.CategoryDataSet();
+            this.categoryDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryDataTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // monCalender
@@ -103,6 +108,8 @@
             // 
             // cmbCategory
             // 
+            this.cmbCategory.DataSource = this.categoryDataTableBindingSource;
+            this.cmbCategory.DisplayMember = "分類";
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Location = new System.Drawing.Point(264, 18);
             this.cmbCategory.Name = "cmbCategory";
@@ -132,6 +139,16 @@
             this.mtxtMoney.TabIndex = 11;
             this.mtxtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // categoryDataSet
+            // 
+            this.categoryDataSet.DataSetName = "CategoryDataSet";
+            this.categoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoryDataTableBindingSource
+            // 
+            this.categoryDataTableBindingSource.DataMember = "CategoryDataTable";
+            this.categoryDataTableBindingSource.DataSource = this.categoryDataSet;
+            // 
             // ItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -150,6 +167,8 @@
             this.Controls.Add(this.monCalender);
             this.Name = "ItemForm";
             this.Text = "登録";
+            ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryDataTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +186,7 @@
         public System.Windows.Forms.ComboBox cmbCategory;
         public System.Windows.Forms.TextBox txtItem;
         public System.Windows.Forms.TextBox textRemarks;
+        private CategoryDataSet categoryDataSet;
+        private System.Windows.Forms.BindingSource categoryDataTableBindingSource;
     }
 }
