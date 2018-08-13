@@ -24,7 +24,7 @@ namespace MyHouseKeepingBook {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class MoneyDataSet : global::System.Data.DataSet {
         
-        private DataTable1DataTable tableDataTable1;
+        private moneyDataTableDataTable tablemoneyDataTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace MyHouseKeepingBook {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["moneyDataTable"] != null)) {
+                    base.Tables.Add(new moneyDataTableDataTable(ds.Tables["moneyDataTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace MyHouseKeepingBook {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public moneyDataTableDataTable moneyDataTable {
             get {
-                return this.tableDataTable1;
+                return this.tablemoneyDataTable;
             }
         }
         
@@ -152,8 +152,8 @@ namespace MyHouseKeepingBook {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["moneyDataTable"] != null)) {
+                    base.Tables.Add(new moneyDataTableDataTable(ds.Tables["moneyDataTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace MyHouseKeepingBook {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tablemoneyDataTable = ((moneyDataTableDataTable)(base.Tables["moneyDataTable"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tablemoneyDataTable != null)) {
+                    this.tablemoneyDataTable.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace MyHouseKeepingBook {
             this.Namespace = "http://tempuri.org/MoneyDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tablemoneyDataTable = new moneyDataTableDataTable();
+            base.Tables.Add(this.tablemoneyDataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerializemoneyDataTable() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace MyHouseKeepingBook {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void moneyDataTableRowChangeEventHandler(object sender, moneyDataTableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
+        public partial class moneyDataTableDataTable : global::System.Data.TypedTableBase<moneyDataTableRow> {
             
             private global::System.Data.DataColumn column日付;
             
@@ -291,8 +291,8 @@ namespace MyHouseKeepingBook {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public moneyDataTableDataTable() {
+                this.TableName = "moneyDataTable";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace MyHouseKeepingBook {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal moneyDataTableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +317,7 @@ namespace MyHouseKeepingBook {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected moneyDataTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -373,49 +373,49 @@ namespace MyHouseKeepingBook {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row this[int index] {
+            public moneyDataTableRow this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((moneyDataTableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event moneyDataTableRowChangeEventHandler moneyDataTableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event moneyDataTableRowChangeEventHandler moneyDataTableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event moneyDataTableRowChangeEventHandler moneyDataTableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event moneyDataTableRowChangeEventHandler moneyDataTableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddmoneyDataTableRow(moneyDataTableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(System.DateTime 日付, string 分類, string 品名, int 金額, string 備考) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public moneyDataTableRow AddmoneyDataTableRow(System.DateTime 日付, string 分類, string 品名, int 金額, string 備考) {
+                moneyDataTableRow rowmoneyDataTableRow = ((moneyDataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         日付,
                         分類,
                         品名,
                         金額,
                         備考};
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
+                rowmoneyDataTableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowmoneyDataTableRow);
+                return rowmoneyDataTableRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                moneyDataTableDataTable cln = ((moneyDataTableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,7 +423,7 @@ namespace MyHouseKeepingBook {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new moneyDataTableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -453,28 +453,28 @@ namespace MyHouseKeepingBook {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public moneyDataTableRow NewmoneyDataTableRow() {
+                return ((moneyDataTableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new moneyDataTableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(moneyDataTableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.moneyDataTableRowChanged != null)) {
+                    this.moneyDataTableRowChanged(this, new moneyDataTableRowChangeEvent(((moneyDataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +482,8 @@ namespace MyHouseKeepingBook {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.moneyDataTableRowChanging != null)) {
+                    this.moneyDataTableRowChanging(this, new moneyDataTableRowChangeEvent(((moneyDataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,8 +491,8 @@ namespace MyHouseKeepingBook {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.moneyDataTableRowDeleted != null)) {
+                    this.moneyDataTableRowDeleted(this, new moneyDataTableRowChangeEvent(((moneyDataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -500,14 +500,14 @@ namespace MyHouseKeepingBook {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.moneyDataTableRowDeleting != null)) {
+                    this.moneyDataTableRowDeleting(this, new moneyDataTableRowChangeEvent(((moneyDataTableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemovemoneyDataTableRow(moneyDataTableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -534,7 +534,7 @@ namespace MyHouseKeepingBook {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "moneyDataTableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -578,15 +578,15 @@ namespace MyHouseKeepingBook {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class moneyDataTableRow : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private moneyDataTableDataTable tablemoneyDataTable;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal moneyDataTableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
+                this.tablemoneyDataTable = ((moneyDataTableDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -594,14 +594,14 @@ namespace MyHouseKeepingBook {
             public System.DateTime 日付 {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.日付Column]));
+                        return ((global::System.DateTime)(this[this.tablemoneyDataTable.日付Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'日付\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'moneyDataTable\' にある列 \'日付\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.日付Column] = value;
+                    this[this.tablemoneyDataTable.日付Column] = value;
                 }
             }
             
@@ -610,14 +610,14 @@ namespace MyHouseKeepingBook {
             public string 分類 {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.分類Column]));
+                        return ((string)(this[this.tablemoneyDataTable.分類Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'分類\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'moneyDataTable\' にある列 \'分類\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.分類Column] = value;
+                    this[this.tablemoneyDataTable.分類Column] = value;
                 }
             }
             
@@ -626,14 +626,14 @@ namespace MyHouseKeepingBook {
             public string 品名 {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.品名Column]));
+                        return ((string)(this[this.tablemoneyDataTable.品名Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'品名\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'moneyDataTable\' にある列 \'品名\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.品名Column] = value;
+                    this[this.tablemoneyDataTable.品名Column] = value;
                 }
             }
             
@@ -642,14 +642,14 @@ namespace MyHouseKeepingBook {
             public int 金額 {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable1.金額Column]));
+                        return ((int)(this[this.tablemoneyDataTable.金額Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'金額\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'moneyDataTable\' にある列 \'金額\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.金額Column] = value;
+                    this[this.tablemoneyDataTable.金額Column] = value;
                 }
             }
             
@@ -658,75 +658,75 @@ namespace MyHouseKeepingBook {
             public string 備考 {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.備考Column]));
+                        return ((string)(this[this.tablemoneyDataTable.備考Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'備考\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'moneyDataTable\' にある列 \'備考\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.備考Column] = value;
+                    this[this.tablemoneyDataTable.備考Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is日付Null() {
-                return this.IsNull(this.tableDataTable1.日付Column);
+                return this.IsNull(this.tablemoneyDataTable.日付Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set日付Null() {
-                this[this.tableDataTable1.日付Column] = global::System.Convert.DBNull;
+                this[this.tablemoneyDataTable.日付Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is分類Null() {
-                return this.IsNull(this.tableDataTable1.分類Column);
+                return this.IsNull(this.tablemoneyDataTable.分類Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set分類Null() {
-                this[this.tableDataTable1.分類Column] = global::System.Convert.DBNull;
+                this[this.tablemoneyDataTable.分類Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is品名Null() {
-                return this.IsNull(this.tableDataTable1.品名Column);
+                return this.IsNull(this.tablemoneyDataTable.品名Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set品名Null() {
-                this[this.tableDataTable1.品名Column] = global::System.Convert.DBNull;
+                this[this.tablemoneyDataTable.品名Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is金額Null() {
-                return this.IsNull(this.tableDataTable1.金額Column);
+                return this.IsNull(this.tablemoneyDataTable.金額Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set金額Null() {
-                this[this.tableDataTable1.金額Column] = global::System.Convert.DBNull;
+                this[this.tablemoneyDataTable.金額Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is備考Null() {
-                return this.IsNull(this.tableDataTable1.備考Column);
+                return this.IsNull(this.tablemoneyDataTable.備考Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set備考Null() {
-                this[this.tableDataTable1.備考Column] = global::System.Convert.DBNull;
+                this[this.tablemoneyDataTable.備考Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -734,22 +734,22 @@ namespace MyHouseKeepingBook {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class moneyDataTableRowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private moneyDataTableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public moneyDataTableRowChangeEvent(moneyDataTableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row Row {
+            public moneyDataTableRow Row {
                 get {
                     return this.eventRow;
                 }
