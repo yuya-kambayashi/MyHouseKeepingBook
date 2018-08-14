@@ -159,5 +159,21 @@ namespace MyHouseKeepingBook
         {
             UpdateData();
         }
+
+        private void DeleteData()
+        {
+            int nowRow = dgv.CurrentRow.Index;
+            dgv.Rows.RemoveAt(nowRow);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DeleteData();
+        }
+
+        private void 削除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteData();
+        }
     }
 }
