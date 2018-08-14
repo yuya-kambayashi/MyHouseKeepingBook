@@ -61,5 +61,34 @@ namespace MyHouseKeepingBook
         {
             this.Close();
         }
+
+        private void SaveData()
+        {
+            string path = "MoneyData.csv";
+            string strData = "";
+
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(
+                path, false, System.Text.Encoding.Default);
+
+            foreach (MoneyDataSet.moneyDataTableRow drMoney in moneyDataSet.moneyDataTable)
+            {
+                strData = drMoney.日付.ToShortDateString() + ","
+                    + drMoney.分類 + ","
+                    + drMoney.品名 + ","
+                    + drMoney.金額.ToString() + ","
+                    + drMoney.備考;
+
+                sw.WriteLine(strData);
+            }
+
+            sw.Close();
+
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SaveData();
+        }
+
     }
 }

@@ -241,6 +241,7 @@
             this.MainMenuStrip = this.mainMenu;
             this.Name = "Form1";
             this.Text = "簡易家計簿";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
