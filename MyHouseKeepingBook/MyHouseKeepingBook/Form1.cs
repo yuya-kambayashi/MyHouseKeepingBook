@@ -19,10 +19,23 @@ namespace MyHouseKeepingBook
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            ItemForm itemForm = new ItemForm(categoryDataSet1);
-            //DailogResult drRet = itemForm.ShowDialog();
-            itemForm.ShowDialog();
+            AddData();
+        }
 
+        private void AddData()
+        {
+            ItemForm itemForm = new ItemForm(categoryDataSet1);
+            DialogResult drRet = itemForm.ShowDialog();
+
+            if (drRet == DialogResult.OK)
+            {
+                moneyDataSet.moneyDataTable.AddmoneyDataTableRow(
+                    itemForm.monCalender.SelectionRange.Start
+                    , itemForm.cmbCategory.Text
+                    , itemForm.txtItem.Text
+                    , int.Parse(itemForm.mtxtMoney.Text)
+                    , itemForm.textRemarks.Text);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -32,6 +45,21 @@ namespace MyHouseKeepingBook
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("雑費", "出金");
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("住居", "出金");
 
+        }
+
+        private void 追加ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddData();
+        }
+
+        private void buttonEnd_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void 終了XToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

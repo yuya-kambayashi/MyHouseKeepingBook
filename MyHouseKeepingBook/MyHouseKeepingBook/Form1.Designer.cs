@@ -50,6 +50,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEnd = new System.Windows.Forms.Button();
             this.categoryDataSet1 = new MyHouseKeepingBook.CategoryDataSet();
+            this.追加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moneyDataTableBindingSource)).BeginInit();
@@ -95,11 +96,14 @@
             // 終了XToolStripMenuItem
             // 
             this.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem";
-            this.終了XToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.終了XToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.終了XToolStripMenuItem.Text = "終了(&X)";
+            this.終了XToolStripMenuItem.Click += new System.EventHandler(this.終了XToolStripMenuItem_Click);
             // 
             // 編集EToolStripMenuItem
             // 
+            this.編集EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.追加ToolStripMenuItem});
             this.編集EToolStripMenuItem.Name = "編集EToolStripMenuItem";
             this.編集EToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.編集EToolStripMenuItem.Text = "編集(&E)";
@@ -209,11 +213,19 @@
             this.buttonEnd.TabIndex = 5;
             this.buttonEnd.Text = "終了";
             this.buttonEnd.UseVisualStyleBackColor = true;
+            this.buttonEnd.Click += new System.EventHandler(this.buttonEnd_Click);
             // 
             // categoryDataSet1
             // 
             this.categoryDataSet1.DataSetName = "CategoryDataSet";
             this.categoryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // 追加ToolStripMenuItem
+            // 
+            this.追加ToolStripMenuItem.Name = "追加ToolStripMenuItem";
+            this.追加ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.追加ToolStripMenuItem.Text = "追加";
+            this.追加ToolStripMenuItem.Click += new System.EventHandler(this.追加ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -264,6 +276,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 備考DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource moneyDataTableBindingSource;
         private CategoryDataSet categoryDataSet1;
+        private System.Windows.Forms.ToolStripMenuItem 追加ToolStripMenuItem;
     }
 }
 

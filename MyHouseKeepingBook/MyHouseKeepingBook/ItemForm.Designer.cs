@@ -37,13 +37,13 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.categoryDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryDataSet = new MyHouseKeepingBook.CategoryDataSet();
             this.txtItem = new System.Windows.Forms.TextBox();
             this.textRemarks = new System.Windows.Forms.TextBox();
             this.mtxtMoney = new System.Windows.Forms.MaskedTextBox();
-            this.categoryDataSet = new MyHouseKeepingBook.CategoryDataSet();
-            this.categoryDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // monCalender
@@ -90,6 +90,7 @@
             // 
             // buttonOK
             // 
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.Location = new System.Drawing.Point(55, 193);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
@@ -99,6 +100,7 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Location = new System.Drawing.Point(249, 192);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
@@ -115,6 +117,16 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(121, 20);
             this.cmbCategory.TabIndex = 7;
+            // 
+            // categoryDataTableBindingSource
+            // 
+            this.categoryDataTableBindingSource.DataMember = "CategoryDataTable";
+            this.categoryDataTableBindingSource.DataSource = this.categoryDataSet;
+            // 
+            // categoryDataSet
+            // 
+            this.categoryDataSet.DataSetName = "CategoryDataSet";
+            this.categoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtItem
             // 
@@ -139,16 +151,6 @@
             this.mtxtMoney.TabIndex = 11;
             this.mtxtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // categoryDataSet
-            // 
-            this.categoryDataSet.DataSetName = "CategoryDataSet";
-            this.categoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // categoryDataTableBindingSource
-            // 
-            this.categoryDataTableBindingSource.DataMember = "CategoryDataTable";
-            this.categoryDataTableBindingSource.DataSource = this.categoryDataSet;
-            // 
             // ItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -167,8 +169,8 @@
             this.Controls.Add(this.monCalender);
             this.Name = "ItemForm";
             this.Text = "登録";
-            ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
