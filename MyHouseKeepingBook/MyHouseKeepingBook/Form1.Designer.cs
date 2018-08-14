@@ -54,25 +54,27 @@
             this.categoryDataSet1 = new MyHouseKeepingBook.CategoryDataSet();
             this.削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabList = new System.Windows.Forms.TabPage();
+            this.tabSummary = new System.Windows.Forms.TabPage();
             this.sumDgv = new System.Windows.Forms.DataGridView();
-            this.summaryDataSet = new MyHouseKeepingBook.SummaryDataSet();
-            this.sumDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.日付DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.入金合計DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.出金合計DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.summaryDataSet = new MyHouseKeepingBook.SummaryDataSet();
+            this.一覧表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.集計表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moneyDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabList.SuspendLayout();
+            this.tabSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sumDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.summaryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sumDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summaryDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -130,19 +132,22 @@
             // 追加ToolStripMenuItem
             // 
             this.追加ToolStripMenuItem.Name = "追加ToolStripMenuItem";
-            this.追加ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.追加ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.追加ToolStripMenuItem.Text = "追加";
             this.追加ToolStripMenuItem.Click += new System.EventHandler(this.追加ToolStripMenuItem_Click);
             // 
             // 変更ToolStripMenuItem
             // 
             this.変更ToolStripMenuItem.Name = "変更ToolStripMenuItem";
-            this.変更ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.変更ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.変更ToolStripMenuItem.Text = "変更";
             this.変更ToolStripMenuItem.Click += new System.EventHandler(this.変更ToolStripMenuItem_Click);
             // 
             // 表示VToolStripMenuItem
             // 
+            this.表示VToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.一覧表示ToolStripMenuItem,
+            this.集計表示ToolStripMenuItem});
             this.表示VToolStripMenuItem.Name = "表示VToolStripMenuItem";
             this.表示VToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.表示VToolStripMenuItem.Text = "表示(&V)";
@@ -167,7 +172,7 @@
             this.dgv.Location = new System.Drawing.Point(6, 6);
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 21;
-            this.dgv.Size = new System.Drawing.Size(365, 150);
+            this.dgv.Size = new System.Drawing.Size(365, 164);
             this.dgv.TabIndex = 1;
             // 
             // 日付DataGridViewTextBoxColumn
@@ -212,7 +217,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(6, 162);
+            this.buttonAdd.Location = new System.Drawing.Point(6, 176);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 2;
@@ -222,7 +227,7 @@
             // 
             // buttonChange
             // 
-            this.buttonChange.Location = new System.Drawing.Point(87, 162);
+            this.buttonChange.Location = new System.Drawing.Point(87, 176);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(75, 23);
             this.buttonChange.TabIndex = 3;
@@ -232,7 +237,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(168, 162);
+            this.buttonDelete.Location = new System.Drawing.Point(168, 176);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 4;
@@ -242,7 +247,7 @@
             // 
             // buttonEnd
             // 
-            this.buttonEnd.Location = new System.Drawing.Point(296, 162);
+            this.buttonEnd.Location = new System.Drawing.Point(296, 176);
             this.buttonEnd.Name = "buttonEnd";
             this.buttonEnd.Size = new System.Drawing.Size(75, 23);
             this.buttonEnd.TabIndex = 5;
@@ -258,45 +263,46 @@
             // 削除ToolStripMenuItem
             // 
             this.削除ToolStripMenuItem.Name = "削除ToolStripMenuItem";
-            this.削除ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.削除ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.削除ToolStripMenuItem.Text = "削除";
             this.削除ToolStripMenuItem.Click += new System.EventHandler(this.削除ToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 38);
+            this.tabControl1.Controls.Add(this.tabList);
+            this.tabControl1.Controls.Add(this.tabSummary);
+            this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(382, 217);
+            this.tabControl1.Size = new System.Drawing.Size(382, 228);
             this.tabControl1.TabIndex = 6;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // tabPage1
+            // tabList
             // 
-            this.tabPage1.Controls.Add(this.dgv);
-            this.tabPage1.Controls.Add(this.buttonEnd);
-            this.tabPage1.Controls.Add(this.buttonAdd);
-            this.tabPage1.Controls.Add(this.buttonDelete);
-            this.tabPage1.Controls.Add(this.buttonChange);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(374, 191);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "一覧表示";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabList.Controls.Add(this.dgv);
+            this.tabList.Controls.Add(this.buttonEnd);
+            this.tabList.Controls.Add(this.buttonAdd);
+            this.tabList.Controls.Add(this.buttonDelete);
+            this.tabList.Controls.Add(this.buttonChange);
+            this.tabList.Location = new System.Drawing.Point(4, 22);
+            this.tabList.Name = "tabList";
+            this.tabList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabList.Size = new System.Drawing.Size(374, 202);
+            this.tabList.TabIndex = 0;
+            this.tabList.Text = "一覧表示";
+            this.tabList.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabSummary
             // 
-            this.tabPage2.Controls.Add(this.sumDgv);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(374, 191);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "集計表示";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabSummary.Controls.Add(this.sumDgv);
+            this.tabSummary.Location = new System.Drawing.Point(4, 22);
+            this.tabSummary.Name = "tabSummary";
+            this.tabSummary.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSummary.Size = new System.Drawing.Size(374, 202);
+            this.tabSummary.TabIndex = 1;
+            this.tabSummary.Text = "集計表示";
+            this.tabSummary.UseVisualStyleBackColor = true;
             // 
             // sumDgv
             // 
@@ -310,18 +316,8 @@
             this.sumDgv.Location = new System.Drawing.Point(6, 6);
             this.sumDgv.Name = "sumDgv";
             this.sumDgv.RowTemplate.Height = 21;
-            this.sumDgv.Size = new System.Drawing.Size(362, 182);
+            this.sumDgv.Size = new System.Drawing.Size(362, 190);
             this.sumDgv.TabIndex = 0;
-            // 
-            // summaryDataSet
-            // 
-            this.summaryDataSet.DataSetName = "SummaryDataSet";
-            this.summaryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sumDataTableBindingSource
-            // 
-            this.sumDataTableBindingSource.DataMember = "SumDataTable";
-            this.sumDataTableBindingSource.DataSource = this.summaryDataSet;
             // 
             // 日付DataGridViewTextBoxColumn1
             // 
@@ -340,6 +336,30 @@
             this.出金合計DataGridViewTextBoxColumn.DataPropertyName = "出金合計";
             this.出金合計DataGridViewTextBoxColumn.HeaderText = "出金合計";
             this.出金合計DataGridViewTextBoxColumn.Name = "出金合計DataGridViewTextBoxColumn";
+            // 
+            // sumDataTableBindingSource
+            // 
+            this.sumDataTableBindingSource.DataMember = "SumDataTable";
+            this.sumDataTableBindingSource.DataSource = this.summaryDataSet;
+            // 
+            // summaryDataSet
+            // 
+            this.summaryDataSet.DataSetName = "SummaryDataSet";
+            this.summaryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // 一覧表示ToolStripMenuItem
+            // 
+            this.一覧表示ToolStripMenuItem.Name = "一覧表示ToolStripMenuItem";
+            this.一覧表示ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.一覧表示ToolStripMenuItem.Text = "一覧表示";
+            this.一覧表示ToolStripMenuItem.Click += new System.EventHandler(this.一覧表示ToolStripMenuItem_Click);
+            // 
+            // 集計表示ToolStripMenuItem
+            // 
+            this.集計表示ToolStripMenuItem.Name = "集計表示ToolStripMenuItem";
+            this.集計表示ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.集計表示ToolStripMenuItem.Text = "集計表示";
+            this.集計表示ToolStripMenuItem.Click += new System.EventHandler(this.集計表示ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -360,11 +380,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.moneyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataSet1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabList.ResumeLayout(false);
+            this.tabSummary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sumDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.summaryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sumDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summaryDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,14 +417,16 @@
         private System.Windows.Forms.ToolStripMenuItem 変更ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 削除ToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabList;
+        private System.Windows.Forms.TabPage tabSummary;
         private System.Windows.Forms.DataGridView sumDgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn 日付DataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn 入金合計DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn 出金合計DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sumDataTableBindingSource;
         private SummaryDataSet summaryDataSet;
+        private System.Windows.Forms.ToolStripMenuItem 一覧表示ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 集計表示ToolStripMenuItem;
     }
 }
 

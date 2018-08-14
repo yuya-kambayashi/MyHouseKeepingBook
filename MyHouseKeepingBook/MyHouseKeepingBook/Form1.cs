@@ -175,5 +175,70 @@ namespace MyHouseKeepingBook
         {
             DeleteData();
         }
+
+        private void CalcSummary()
+        {
+            string expression;
+
+            summaryDataSet.SumDataTable.Clear();
+
+            foreach(MoneyDataSet.moneyDataTableRow drMoney in moneyDataSet.moneyDataTable)
+            {
+
+                expression = "日付= '" + drMoney.日付.ToShortDateString() + "'";
+                SummaryDataSet.SumDataTableRow[] curDR =
+                    (SummaryDataSet.SumDataTableRow[])summaryDataSet.SumDataTable.Select(expression);
+
+                if (curDR.Length == 0)
+                {
+                    CategoryDataSet.CategoryDataTableRow[] selectedDataRow;
+                    selectedDataRow = (CategoryDataSet.CategoryDataTableRow[])
+                        categoryDataSet1.CategoryDataTable.Select("分類='" + drMoney.分類 + "'");
+
+                    if (selectedDataRow[0].入出金分類 == "入金")
+                    {
+                        summaryDataSet.SumDataTable.AddSumDataTableRow(drMoney.日付, drMoney.金額, 0);
+                    }
+                    else if (selectedDataRow[0].入出金分類 == "出金")
+                    {
+                        summaryDataSet.SumDataTable.AddSumDataTableRow(drMoney.日付, 0, drMoney.金額);
+                    }
+                }
+                else
+                {
+                    var selectDataRow = (CategoryDataSet.CategoryDataTableRow[])
+                        categoryDataSet1.CategoryDataTable.Select("分類='" + drMoney.分類 + "'");
+
+                    if (selectDataRow[0].入出金分類 == "入金")
+                    {
+                        curDR[0].入金合計 += drMoney.金額;
+                    }
+                    else if (selectDataRow[0].入出金分類 == "出金")
+                    {
+                        curDR[0].出金合計 += drMoney.金額;
+                    }
+
+                }
+
+            }
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalcSummary();
+
+        }
+
+        private void 一覧表示ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabList);
+        }
+
+        private void 集計表示ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabSummary);
+
+        }
     }
 }
