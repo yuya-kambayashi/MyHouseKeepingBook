@@ -12,11 +12,36 @@ namespace MyHouseKeepingBook
 {
     public partial class ItemForm : Form
     {
-        public ItemForm(CategoryDataSet dsCategory)
+        private ItemForm()
+        {
+        }
+
+        public ItemForm(
+              CategoryDataSet dsCategory
+            )
         {
             InitializeComponent();
-
             categoryDataSet.Merge(dsCategory);
+
+        }
+
+        public ItemForm(
+              CategoryDataSet    dsCategory
+            , DateTime           nowDate
+            , string             category
+            , string             item
+            , int                money
+            , string             remarks
+            )
+        {
+            InitializeComponent();
+            categoryDataSet.Merge(dsCategory);
+            monCalender.SetDate(nowDate);
+            cmbCategory.Text = category;
+            txtItem.Text = item;
+            mtxtMoney.Text = money.ToString();
+            textRemarks.Text = remarks;
+
         }
     }
 }

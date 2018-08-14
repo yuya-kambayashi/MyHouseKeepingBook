@@ -35,6 +35,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.終了XToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.編集EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.追加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.表示VToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ヘルプHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv = new System.Windows.Forms.DataGridView();
@@ -50,7 +51,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEnd = new System.Windows.Forms.Button();
             this.categoryDataSet1 = new MyHouseKeepingBook.CategoryDataSet();
-            this.追加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.変更ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moneyDataTableBindingSource)).BeginInit();
@@ -96,17 +97,25 @@
             // 終了XToolStripMenuItem
             // 
             this.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem";
-            this.終了XToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.終了XToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.終了XToolStripMenuItem.Text = "終了(&X)";
             this.終了XToolStripMenuItem.Click += new System.EventHandler(this.終了XToolStripMenuItem_Click);
             // 
             // 編集EToolStripMenuItem
             // 
             this.編集EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.追加ToolStripMenuItem});
+            this.追加ToolStripMenuItem,
+            this.変更ToolStripMenuItem});
             this.編集EToolStripMenuItem.Name = "編集EToolStripMenuItem";
             this.編集EToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.編集EToolStripMenuItem.Text = "編集(&E)";
+            // 
+            // 追加ToolStripMenuItem
+            // 
+            this.追加ToolStripMenuItem.Name = "追加ToolStripMenuItem";
+            this.追加ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.追加ToolStripMenuItem.Text = "追加";
+            this.追加ToolStripMenuItem.Click += new System.EventHandler(this.追加ToolStripMenuItem_Click);
             // 
             // 表示VToolStripMenuItem
             // 
@@ -195,6 +204,7 @@
             this.buttonChange.TabIndex = 3;
             this.buttonChange.Text = "変更";
             this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // buttonDelete
             // 
@@ -220,12 +230,12 @@
             this.categoryDataSet1.DataSetName = "CategoryDataSet";
             this.categoryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // 追加ToolStripMenuItem
+            // 変更ToolStripMenuItem
             // 
-            this.追加ToolStripMenuItem.Name = "追加ToolStripMenuItem";
-            this.追加ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.追加ToolStripMenuItem.Text = "追加";
-            this.追加ToolStripMenuItem.Click += new System.EventHandler(this.追加ToolStripMenuItem_Click);
+            this.変更ToolStripMenuItem.Name = "変更ToolStripMenuItem";
+            this.変更ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.変更ToolStripMenuItem.Text = "変更";
+            this.変更ToolStripMenuItem.Click += new System.EventHandler(this.変更ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -278,6 +288,7 @@
         private System.Windows.Forms.BindingSource moneyDataTableBindingSource;
         private CategoryDataSet categoryDataSet1;
         private System.Windows.Forms.ToolStripMenuItem 追加ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 変更ToolStripMenuItem;
     }
 }
 
