@@ -40,6 +40,7 @@ namespace MyHouseKeepingBook
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadData();
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("給料", "入金");
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("食費", "出金");
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("雑費", "出金");
@@ -90,5 +91,40 @@ namespace MyHouseKeepingBook
             SaveData();
         }
 
+        private void LoadData()
+        {
+            string path = "MoneyData.csv";
+            string delimStr = ",";
+            char[] delimiter = delimStr.ToCharArray();
+            string[] strData;
+            string strLine;
+
+            bool fileExist = System.IO.File.Exists(path);
+
+            if (fileExist)
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader(path, System.Text.Encoding.Default);
+
+
+                while (sr.Peek() >= 0)
+                {
+                    strLine = sr.ReadLine();
+                    strData = strLine.Split(delimiter);
+
+                    moneyDataSet.moneyDataTable.AddmoneyDataTableRow(
+                        DateTime.Parse(strData[0]),
+                        strData[1],
+                        strData[2],
+                        int.Parse(strData[3]),
+                        strData[4]
+                        );
+                }
+
+                sr.Close();
+            }
+
+
+
+        }
     }
 }
