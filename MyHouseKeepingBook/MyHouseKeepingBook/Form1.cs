@@ -46,6 +46,8 @@ namespace MyHouseKeepingBook
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("雑費", "出金");
             categoryDataSet1.CategoryDataTable.AddCategoryDataTableRow("住居", "出金");
 
+            //test1
+
         }
 
         private void 追加ToolStripMenuItem_Click(object sender, EventArgs e)
